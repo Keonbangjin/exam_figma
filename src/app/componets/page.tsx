@@ -1,13 +1,12 @@
-// In @/componets/PageComp.tsx
 import Image from "next/image";
-import pointer from '../assets/pointer.svg'
-import restagelImg from '../assets/Rectangle layout-img.svg'
+import pointer from '../assets/pointer.svg';
+import restagelImg from '../assets/Rectangle layout-img.svg';
 
-interface PageCompProps {
+interface PageProps {
     pageName: string;
 }
 
-const PageComp: React.FC<PageCompProps> = ({ pageName }) => {
+const Page: React.FC<PageProps> = ({ pageName }) => {
     return (
         <div className="relative flex items-center justify-center">
             <Image className="z-0" src={restagelImg} alt="res" />
@@ -16,7 +15,7 @@ const PageComp: React.FC<PageCompProps> = ({ pageName }) => {
                 <h2 className="flex gap-5 text-base font-medium">Home <Image src={pointer} alt="res" /> {pageName}</h2>
             </div>
         </div>
-    )
+    );
 };
 
-export default PageComp;
+export default Page;
