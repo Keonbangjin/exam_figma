@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-interface CartClientMessage {
+interface CartClientProps {
     message: string;
 }
 
-const CartClient: React.FC<CartClientMessage> = ({ message }) => {
+const CartClient: React.FC<CartClientProps> = ({ message }) => {
     const [count, setCount] = useState<number>(1);
     const [id, setId] = useState<string[]>([]);
     const [cart, setCart] = useState(false);
